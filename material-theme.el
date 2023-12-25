@@ -231,7 +231,7 @@
    `(hl-line ((,class (:inverse-video nil :background ,current-line))))
    `(gui-element ((,class (:background ,current-line :foreground ,foreground))))
    `(mode-line ((,class (:foreground ,foreground :background ,far-background))))
-   `(mode-line-buffer-id ((,class (:foreground ,foreground :background nil :weight bold))))
+   `(mode-line-buffer-id ((,class (:foreground ,foreground :background unspecified :weight bold))))
    `(mode-line-inactive ((,class (:inherit mode-line
                                            :foreground ,subtle
                                            :background ,far-background :weight normal
@@ -242,7 +242,7 @@
    `(region ((,class (:background ,selection))))
    `(secondary-selection ((,class (:background ,secondary-selection))))
 
-   `(header-line ((,class (:inherit mode-line :foreground ,purple :background nil))))
+   `(header-line ((,class (:inherit mode-line :foreground ,purple :background unspecified))))
 
    `(trailing-whitespace ((,class (:foreground ,red :inverse-video t :underline nil))))
    `(whitespace-trailing ((,class (:foreground ,red :inverse-video t :underline nil))))
@@ -262,7 +262,7 @@
 
    ;; Smartparens paren matching
    `(sp-show-pair-match-face ((,class (:foreground "black" :background ,aqua :inherit show-paren-match))))
-   `(sp-show-pair-mismatch-face ((,class (:foreground nil :background nil :inherit show-paren-mismatch))))
+   `(sp-show-pair-mismatch-face ((,class (:foreground unspecified :background unspecified :inherit show-paren-mismatch))))
 
    ;; Parenthesis matching (mic-paren)
    `(paren-face-match ((,class (:foreground nil :background nil :inherit show-paren-match))))
@@ -289,8 +289,8 @@
    `(diff-added ((,class (:foreground ,green))))
    `(diff-changed ((,class (:foreground ,aqua))))
    `(diff-removed ((,class (:foreground ,orange))))
-   `(diff-header ((,class (:foreground ,aqua :background nil))))
-   `(diff-file-header ((,class (:foreground ,blue :background nil))))
+   `(diff-header ((,class (:foreground ,aqua :background unspecified))))
+   `(diff-file-header ((,class (:foreground ,blue :background unspecified))))
    `(diff-hunk-header ((,class (:foreground ,purple))))
    `(diff-refine-added ((,class (:inherit diff-added :inverse-video t))))
    `(diff-refine-removed ((,class (:inherit diff-removed :inverse-video t))))
@@ -427,7 +427,7 @@
    `(git-gutter-fr:added ((,class (:foreground ,green :weight bold))))
    `(git-gutter-fr:deleted ((,class (:foreground ,red :weight bold))))
 
-   `(link ((,class (:foreground nil :underline t))))
+   `(link ((,class (:foreground unspecified :underline t))))
    `(widget-button ((,class (:underline t :weight bold))))
    `(widget-field ((,class (:background ,current-line :box (:line-width 1 :color ,foreground)))))
 
@@ -605,12 +605,12 @@
    `(erb-comment-delim-face ((,class (:background ,current-line))))
 
    ;; Message-mode
-   `(message-header-other ((,class (:foreground nil :background nil :weight normal))))
+   `(message-header-other ((,class (:foreground unspecified :background unspecified :weight normal))))
    `(message-header-subject ((,class (:inherit message-header-other :weight bold :foreground ,yellow))))
    `(message-header-to ((,class (:inherit message-header-other :weight bold :foreground ,orange))))
-   `(message-header-cc ((,class (:inherit message-header-to :foreground nil))))
-   `(message-header-name ((,class (:foreground ,blue :background nil))))
-   `(message-header-newsgroups ((,class (:foreground ,aqua :background nil :slant normal))))
+   `(message-header-cc ((,class (:inherit message-header-to :foreground unspecified))))
+   `(message-header-name ((,class (:foreground ,blue :background unspecified))))
+   `(message-header-newsgroups ((,class (:foreground ,aqua :background unspecified :slant normal))))
    `(message-separator ((,class (:foreground ,purple))))
 
    ;; cfw emacs calendar
@@ -764,7 +764,7 @@
    `(gnus-header-subject ((,class (:inherit message-header-subject))))
    `(gnus-header-from ((,class (:inherit message-header-other-face :weight bold :foreground ,orange))))
    `(gnus-header-name ((,class (:inherit message-header-name))))
-   `(gnus-button ((,class (:inherit link :foreground nil))))
+   `(gnus-button ((,class (:inherit link :foreground unspecified))))
    `(gnus-signature ((,class (:inherit font-lock-comment-face))))
 
    `(gnus-summary-normal-unread ((,class (:foreground ,foreground :weight bold))))
@@ -778,28 +778,28 @@
    `(gnus-summary-high-read ((,class (:foreground ,green :weight normal))))
    `(gnus-summary-high-ancient ((,class (:foreground ,green :weight normal))))
    `(gnus-summary-high-ticked ((,class (:foreground ,orange :weight normal))))
-   `(gnus-summary-cancelled ((,class (:foreground ,red :background nil :weight normal))))
+   `(gnus-summary-cancelled ((,class (:foreground ,red :background unspecified :weight normal))))
 
    `(gnus-group-mail-low ((,class (:foreground ,comment))))
    `(gnus-group-mail-low-empty ((,class (:foreground ,comment))))
-   `(gnus-group-mail-1 ((,class (:foreground nil :weight normal :inherit outline-1))))
-   `(gnus-group-mail-2 ((,class (:foreground nil :weight normal :inherit outline-2))))
-   `(gnus-group-mail-3 ((,class (:foreground nil :weight normal :inherit outline-3))))
-   `(gnus-group-mail-4 ((,class (:foreground nil :weight normal :inherit outline-4))))
-   `(gnus-group-mail-5 ((,class (:foreground nil :weight normal :inherit outline-5))))
-   `(gnus-group-mail-6 ((,class (:foreground nil :weight normal :inherit outline-6))))
+   `(gnus-group-mail-1 ((,class (:foreground unspecified :weight normal :inherit outline-1))))
+   `(gnus-group-mail-2 ((,class (:foreground unspecified :weight normal :inherit outline-2))))
+   `(gnus-group-mail-3 ((,class (:foreground unspecified :weight normal :inherit outline-3))))
+   `(gnus-group-mail-4 ((,class (:foreground unspecified :weight normal :inherit outline-4))))
+   `(gnus-group-mail-5 ((,class (:foreground unspecified :weight normal :inherit outline-5))))
+   `(gnus-group-mail-6 ((,class (:foreground unspecified :weight normal :inherit outline-6))))
    `(gnus-group-mail-1-empty ((,class (:inherit gnus-group-mail-1 :foreground ,comment))))
    `(gnus-group-mail-2-empty ((,class (:inherit gnus-group-mail-2 :foreground ,comment))))
    `(gnus-group-mail-3-empty ((,class (:inherit gnus-group-mail-3 :foreground ,comment))))
    `(gnus-group-mail-4-empty ((,class (:inherit gnus-group-mail-4 :foreground ,comment))))
    `(gnus-group-mail-5-empty ((,class (:inherit gnus-group-mail-5 :foreground ,comment))))
    `(gnus-group-mail-6-empty ((,class (:inherit gnus-group-mail-6 :foreground ,comment))))
-   `(gnus-group-news-1 ((,class (:foreground nil :weight normal :inherit outline-5))))
-   `(gnus-group-news-2 ((,class (:foreground nil :weight normal :inherit outline-6))))
-   `(gnus-group-news-3 ((,class (:foreground nil :weight normal :inherit outline-7))))
-   `(gnus-group-news-4 ((,class (:foreground nil :weight normal :inherit outline-8))))
-   `(gnus-group-news-5 ((,class (:foreground nil :weight normal :inherit outline-1))))
-   `(gnus-group-news-6 ((,class (:foreground nil :weight normal :inherit outline-2))))
+   `(gnus-group-news-1 ((,class (:foreground unspecified :weight normal :inherit outline-5))))
+   `(gnus-group-news-2 ((,class (:foreground unspecified :weight normal :inherit outline-6))))
+   `(gnus-group-news-3 ((,class (:foreground unspecified :weight normal :inherit outline-7))))
+   `(gnus-group-news-4 ((,class (:foreground unspecified :weight normal :inherit outline-8))))
+   `(gnus-group-news-5 ((,class (:foreground unspecified :weight normal :inherit outline-1))))
+   `(gnus-group-news-6 ((,class (:foreground unspecified :weight normal :inherit outline-2))))
    `(gnus-group-news-1-empty ((,class (:inherit gnus-group-news-1 :foreground ,comment))))
    `(gnus-group-news-2-empty ((,class (:inherit gnus-group-news-2 :foreground ,comment))))
    `(gnus-group-news-3-empty ((,class (:inherit gnus-group-news-3 :foreground ,comment))))
@@ -864,7 +864,7 @@
    `(term-color-blue    ((,class (:foreground ,blue :background ,blue))))
    `(term-color-magenta ((,class (:foreground ,purple :background ,purple))))
    `(term-color-cyan    ((,class (:foreground ,aqua :background ,aqua))))
-   `(term-color-white   ((,class (:foreground ,background :background ,background))))
+   `(term-color-white   ((,class (:foreground ,foreground :background ,background))))
 
    ;; elfeed
    `(elfeed-log-date-face ((,class (:foreground ,aqua))))
