@@ -223,7 +223,7 @@
    `(linum ((,class (:background ,background :foreground ,subtle))))
    `(linum-highlight-face ((,class (:background ,current-line :foreground ,foreground))))
    `(border ((,class (:background ,current-line))))
-   `(internal-border ((,class (:background ,current-line))))
+   `(internal-border ((,class (:background ,background))))
    `(vertical-border ((,class (:background ,selection
                                :foreground, selection))))
    `(border-glyph ((,class (nil))))
@@ -514,16 +514,18 @@
                                    :box (:line-width 1 :color nil :style pressed-button)))))
 
    `(org-level-1 ((,class (:inherit outline-1
-                         :background ,header-color
-                         :weight bold
-                         :box (:style released-button)
-                         :height 1.3))))
+                           :background ,header-color
+                           :weight bold
+                           :box (:style released-button)
+                           :height 1.1))))
    `(org-level-2 ((,class (:inherit outline-2
-                                  :background ,"#35575b"
-                                  :box (:style released-button)
-                         :height 1.2))))
-   `(org-level-3 ((,class (:inherit outline-3 :height 1.1))))
-   `(org-level-4 ((,class (:inherit outline-4 :height 1.0))))
+                           :background ,"#35575b"
+                           :box (:style released-button)
+                           :height 1.0))))
+   `(org-level-3 ((,class (:inherit outline-3
+                           :height 1.0))))
+   `(org-level-4 ((,class (:inherit outline-4
+                           :height 1.0))))
    `(org-level-5 ((,class (:inherit outline-5 ))))
    `(org-level-6 ((,class (:inherit outline-6 ))))
    `(org-level-7 ((,class (:inherit outline-7 ))))
